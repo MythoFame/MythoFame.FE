@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MythoFame</title>
+
+    <meta
+      name="description"
+      content="Unofficial MythoLogic Interactive website providing content made by the community."
+    />
+    <meta name="author" content="MythoFame" />
+    <meta name="url" content="https://mythofame.odex.dev" />
+    <meta
+      name="keywords"
+      content="MythoFame, MythoLogic Interactive, Superfighters Deluxe, mods, maps, scripts, community, content"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#262b35" />
+    <meta name="googlebot" content="notranslate" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="it_IT" />
+    <meta property="og:title" content="MythoFame" />
+    <meta
+      property="og:description"
+      content="Unofficial MythoLogic Interactive website providing content made by the community."
+    />
+    <meta property="og:image" content="https://mythofame.odex.dev/images/avatar.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mythofame.odex.dev" />
+
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://mythofame.odex.dev" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <script>
+      (function () {
+        const html = document.documentElement;
+
+        try {
+          const forceDark = true;
+
+          const theme = localStorage.theme;
+          const prefersDark = forceDark || (window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false);
+
+          const isSystem = theme === 'system' || !('theme' in localStorage);
+          const isDark = theme === 'dark' || (isSystem && prefersDark);
+          const resolvedTheme = isDark ? 'dark' : 'light';
+          html.classList.toggle('dark', isDark);
+          html.classList.toggle('dark-theme', isDark);
+          html.setAttribute('data-theme', theme ?? 'system');
+          html.style.colorScheme = resolvedTheme;
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <root></root>
+  </body>
+</html>
