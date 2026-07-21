@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "myhofame": {
+    "mythofame": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -81,10 +81,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "myhofame:build:production"
+              "buildTarget": "mythofame:build:production"
             },
             "development": {
-              "buildTarget": "myhofame:build:development"
+              "buildTarget": "mythofame:build:development"
             }
           },
           "defaultConfiguration": "development"
