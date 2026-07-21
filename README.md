@@ -1,3 +1,3 @@
 # MythoFame
 
-Unofficial website for MythoLogic Interactive to provide content made by the community.
+Unofficial website for MythoLogic Interactive content provided by the community.
