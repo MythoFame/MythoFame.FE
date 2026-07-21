@@ -1,0 +1,28 @@
+pipeline {
+	agent any
+
+	stages {
+		stage('Build') {
+			steps {
+				sh 'npm install'
+				sh 'npm run build'
+			}
+		}
+		stage('Deploy') {
+			steps {
+				sh 'sudo cp -f pipeline/mythofame.conf /etc/nginx/conf.d'
+				sh 'sudo rm -rf /usr/share/nginx/html/mythofame'
+				sh 'sudo cp -rT dist/mythofame/browser /usr/share/nginx/html/mythofame'
+				sh 'sudo nginx -s reload'
+			}
+		}
+	}
+	post {
+		success {
+			echo 'Deployed successfully.'
+		}
+		failure {
+			echo 'Deployment failed.'
+		}
+	}
+}
