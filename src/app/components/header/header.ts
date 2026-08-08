@@ -1,15 +1,39 @@
-import { ChangeDetectionStrategy, Component, HostListener, ViewEncapsulation, signal } from '@angular/core';
+import { BreakpointService } from '@/services/breakpoint';
+import { Component, HostListener, ViewEncapsulation, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'header',
+  selector: 'm-header',
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.html',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.Eager
+  encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent {
+  readonly breakpoint = inject(BreakpointService);
   readonly isMenuOpen = signal(false);
+
+  readonly routes: Route[] = [
+    {
+      label: 'header.home',
+      link: '/'
+    },
+    {
+      label: 'header.about',
+      link: '/about'
+    },
+    {
+      label: 'header.redux',
+      link: '/sfr'
+    },
+    {
+      label: 'header.loader',
+      link: '/mbl'
+    },
+    {
+      label: 'header.workshop',
+      link: '/workshop'
+    }
+  ];
 
   toggleMenu(): void {
     this.isMenuOpen.update((isOpen) => !isOpen);
@@ -24,3 +48,8 @@ export class HeaderComponent {
     this.closeMenu();
   }
 }
+
+type Route = {
+  label: string;
+  link: string;
+};

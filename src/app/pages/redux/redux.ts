@@ -1,9 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'home',
+  selector: 'redux',
   imports: [],
-  templateUrl: './home.html',
+  templateUrl: './redux.html',
   encapsulation: ViewEncapsulation.None
 })
-export class Home {}
+export class Redux {}

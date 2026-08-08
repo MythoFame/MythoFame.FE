@@ -1,11 +1,10 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'footer',
+  selector: 'm-footer',
   imports: [],
   templateUrl: './footer.html',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.Eager
+  encapsulation: ViewEncapsulation.None
 })
 export class FooterComponent {
   readonly today = Date.now();

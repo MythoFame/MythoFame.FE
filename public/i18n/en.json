@@ -1,4 +1,11 @@
 {
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "redux": "Superfighters Redux",
+    "loader": "Meatbag Loader",
+    "workshop": "Workshop"
+  },
   "notfound": {
     "title": "Oops!",
     "subtitle": "404 - PAGE NOT FOUND",

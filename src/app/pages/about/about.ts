@@ -1,9 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'home',
+  selector: 'about',
   imports: [],
-  templateUrl: './home.html',
+  templateUrl: './about.html',
   encapsulation: ViewEncapsulation.None
 })
-export class Home {}
+export class About {}
