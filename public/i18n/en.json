@@ -6,9 +6,12 @@
     "loader": "Meatbag Loader",
     "workshop": "Workshop"
   },
+  "footer": {
+    "author": "MythoFame",
+    "sentence": "~ Made with love ❤️"
+  },
   "notfound": {
-    "title": "Oops!",
-    "subtitle": "404 - PAGE NOT FOUND",
-    "description": "You are in an empty castle."
+    "title": "404",
+    "description": "You are in an empty castle"
   }
 }

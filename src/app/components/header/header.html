@@ -2,9 +2,9 @@
   class="bg-muted fixed top-0 left-0 z-10 flex h-(--header-size) w-full items-center justify-center shadow-lg md:bg-transparent md:backdrop-blur-lg"
 >
   <div class="flex w-11/12 items-center justify-between md:w-3/4">
-    @if (breakpoint.isMobile()) {
+    @if (isMobile()) {
       <div>
-        <m-button [style]="'transparent'" (onClick)="toggleMenu()">
+        <m-button [kind]="'transparent'" (onClick)="toggleMenu()">
           <svg
             class="duration-500 ease-out"
             [ngClass]="{ 'rotate-180': isMenuOpen() }"
@@ -20,9 +20,10 @@
           @for (route of routes; track route.link) {
             <div class="min-w-4/5">
               <m-button
-                [style]="'transparent'"
+                [disabled]="route.disabled"
+                [kind]="'transparent'"
                 class="w-full justify-start font-semibold text-nowrap"
-                (onClick)="navigate.page(route.link)"
+                (onClick)="navigate(route.link)"
               >
                 {{ route.label | translate }}
               </m-button>
@@ -33,14 +34,19 @@
     } @else {
       <div class="font-grotesk flex items-center gap-4">
         @for (route of routes; track route.link) {
-          <m-button [style]="'transparent'" class="font-semibold" (onClick)="navigate.page(route.link)">
+          <m-button
+            [disabled]="route.disabled"
+            [kind]="'transparent'"
+            class="font-semibold"
+            (onClick)="navigate(route.link)"
+          >
             {{ route.label | translate }}
           </m-button>
         }
       </div>
     }
     <div class="flex items-center gap-4">
-      <m-button [style]="'transparent'" (onClick)="theme.toggleTheme()">
+      <m-button [kind]="'transparent'" (onClick)="toggleTheme()">
         <svg lucideSunMoon size="18"></svg>
       </m-button>
     </div>

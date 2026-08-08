@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 export class NavigateService {
   private readonly _router = inject(Router);
 
-  page(route: string): void {
+  toPage(route: string): void {
     this._router.navigate([route]).then(() => {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     });

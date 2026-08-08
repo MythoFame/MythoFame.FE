@@ -1,1 +1,11 @@
-<button (click)="onClick.emit()" [class]="'rounded-sm px-4 py-2 ' + css()" [type]="type()"><ng-content /></button>
+<button
+  (click)="onClick.emit()"
+  [disabled]="disabled()"
+  [class]="
+    'cursor-pointer rounded-sm px-4 py-2 transition-all duration-200 ease-out active:scale-95 active:shadow-inner' +
+    css()
+  "
+  [type]="type()"
+>
+  <ng-content />
+</button>

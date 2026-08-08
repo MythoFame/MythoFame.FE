@@ -13,38 +13,29 @@
 }
 
 :root {
-  /* Light Theme — pastel arcade cabinet */
-  --background: #f7f2ff;
-  --foreground: #21133d;
+  /* Light Theme — warm, powdery rose */
+  --background: #fbf8f5;
+  --foreground: #403640;
   --card: var(--background);
   --card-foreground: var(--foreground);
   --popover: var(--background);
   --popover-foreground: var(--foreground);
-  --primary: #6d28d9;
+  --primary: #9b5d73;
   --primary-foreground: #ffffff;
-  --secondary: #e9e0ff;
+  --secondary: #eee4e8;
   --secondary-foreground: var(--foreground);
-  --muted: #f0eaff;
-  --muted-foreground: #685986;
-  --accent: #ffd166;
-  --accent-foreground: #2a1645;
-  --border: #d3c1f4;
-  --input: #e2d6fa;
-  --ring: #a855f7;
-  --sidebar: #fbf8ff;
+  --muted: #f5eef1;
+  --muted-foreground: #7b6873;
+  --accent: #e8cd9b;
+  --accent-foreground: #4a3936;
+  --border: #e2d3d9;
+  --input: #eadde1;
+  --ring: #c78ca0;
+  --sidebar: #fdfaf8;
   --sidebar-foreground: var(--foreground);
   --sidebar-ring: var(--ring);
 
-  --hero-gradient: linear-gradient(
-    90deg,
-    #6d28d9,
-    #a855f7,
-    #22d3ee,
-    #f43f9d,
-    #22d3ee,
-    #a855f7,
-    #6d28d9
-  );
+  --hero-gradient: linear-gradient(90deg, #a8677e, #c890a2, #9ebfba, #dfbb91, #9ebfba, #c890a2, #a8677e);
 
   /* Global */
   --header-size: 3.5rem;
@@ -58,43 +49,29 @@
 }
 
 .dark {
-  /* Dark Theme — neon arcade at midnight */
-  --background: #100b24;
-  --foreground: #f7f2ff;
+  /* Dark Theme — muted plum at dusk */
+  --background: #211c28;
+  --foreground: #f7f1f3;
   --card: var(--background);
   --card-foreground: var(--foreground);
   --popover: var(--background);
   --popover-foreground: var(--foreground);
-  --primary: #9b5cff;
-  --primary-foreground: #160b31;
-  --secondary: #1d1240;
+  --primary: #d59aad;
+  --primary-foreground: #301d29;
+  --secondary: #342a37;
   --secondary-foreground: var(--foreground);
-  --muted: #170e34;
-  --muted-foreground: #c9bae9;
-  --accent: #ffcf5c;
-  --accent-foreground: #251143;
-  --border: #3b286c;
+  --muted: #2a222f;
+  --muted-foreground: #cbbbc3;
+  --accent: #dfc28d;
+  --accent-foreground: #322824;
+  --border: #493b4d;
   --input: var(--border);
-  --ring: #22d3ee;
-  --sidebar: #150d30;
+  --ring: #d49aad;
+  --sidebar: #28202e;
   --sidebar-foreground: var(--foreground);
   --sidebar-ring: var(--ring);
 
-  --hero-gradient: linear-gradient(
-    90deg,
-    #7c3aed,
-    #c026d3,
-    #22d3ee,
-    #fb3b9a,
-    #22d3ee,
-    #c026d3,
-    #7c3aed
-  );
-}
-
-.content {
-  margin-top: var(--page-pad-t);
-  margin-bottom: var(--page-pad);
+  --hero-gradient: linear-gradient(90deg, #bd7d93, #d4a1b1, #89aca8, #cfaa7e, #89aca8, #d4a1b1, #bd7d93);
 }
 
 @theme inline {
@@ -137,6 +114,17 @@
   }
 }
 
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    font-family: 'Source Code Pro', 'Red Hat Text';
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -150,4 +138,16 @@
 ::-webkit-scrollbar-track {
   border-radius: 5px;
   background: var(--muted);
+}
+
+.pad-t {
+  margin-top: var(--page-pad-t);
+}
+
+.content {
+  min-height: var(--page-h);
+  margin-top: var(--page-pad-t);
+  margin-bottom: var(--page-pad);
+  margin-left: var(--page-pad);
+  margin-right: var(--page-pad);
 }

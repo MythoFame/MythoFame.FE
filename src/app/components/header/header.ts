@@ -14,31 +14,37 @@ import { ButtonComponent } from '../button/button';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent {
-  readonly theme = inject(ThemeService);
-  readonly breakpoint = inject(BreakpointService);
-  readonly navigate = inject(NavigateService);
+  private readonly _themeService = inject(ThemeService);
+  private readonly _breakpointService = inject(BreakpointService);
+  private readonly _navigateService = inject(NavigateService);
+
   readonly isMenuOpen = signal(false);
 
   readonly routes: Route[] = [
     {
       label: 'header.home',
-      link: '/'
+      link: '/',
+      disabled: false
     },
     {
       label: 'header.about',
-      link: '/about'
+      link: '/about',
+      disabled: false
     },
     {
       label: 'header.redux',
-      link: '/redux'
+      link: '/redux',
+      disabled: true
     },
     {
       label: 'header.loader',
-      link: '/loader'
+      link: '/loader',
+      disabled: true
     },
     {
       label: 'header.workshop',
-      link: '/workshop'
+      link: '/workshop',
+      disabled: true
     }
   ];
 
@@ -50,6 +56,19 @@ export class HeaderComponent {
     this.isMenuOpen.set(false);
   }
 
+  toggleTheme(): void {
+    this._themeService.toggleTheme();
+  }
+
+  isMobile(): boolean {
+    return this._breakpointService.isMobile();
+  }
+
+  navigate(route: string): void {
+    this.closeMenu();
+    this._navigateService.toPage(route);
+  }
+
   @HostListener('document:keydown.escape')
   onEscape(): void {
     this.closeMenu();
@@ -59,4 +78,5 @@ export class HeaderComponent {
 type Route = {
   label: string;
   link: string;
+  disabled: boolean;
 };
