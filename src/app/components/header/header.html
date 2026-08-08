@@ -1,0 +1,48 @@
+<div
+  class="bg-muted fixed top-0 left-0 z-10 flex h-(--header-size) w-full items-center justify-center shadow-lg md:bg-transparent md:backdrop-blur-lg"
+>
+  <div class="flex w-11/12 items-center justify-between md:w-3/4">
+    @if (breakpoint.isMobile()) {
+      <div>
+        <m-button [style]="'transparent'" (onClick)="toggleMenu()">
+          <svg
+            class="duration-500 ease-out"
+            [ngClass]="{ 'rotate-180': isMenuOpen() }"
+            lucideChevronRight
+            size="18"
+          ></svg>
+        </m-button>
+
+        <div
+          [ngClass]="{ 'text-foreground! w-4/5': isMenuOpen() }"
+          class="text-muted border-accent bg-muted fixed top-0 -left-0.5 mt-(--header-size) flex h-screen w-0 flex-col items-center gap-6 overflow-hidden border-r-2 py-6 duration-500 ease-out"
+        >
+          @for (route of routes; track route.link) {
+            <div class="min-w-4/5">
+              <m-button
+                [style]="'transparent'"
+                class="w-full justify-start font-semibold text-nowrap"
+                (onClick)="navigate.page(route.link)"
+              >
+                {{ route.label | translate }}
+              </m-button>
+            </div>
+          }
+        </div>
+      </div>
+    } @else {
+      <div class="font-grotesk flex items-center gap-4">
+        @for (route of routes; track route.link) {
+          <m-button [style]="'transparent'" class="font-semibold" (onClick)="navigate.page(route.link)">
+            {{ route.label | translate }}
+          </m-button>
+        }
+      </div>
+    }
+    <div class="flex items-center gap-4">
+      <m-button [style]="'transparent'" (onClick)="theme.toggleTheme()">
+        <svg lucideSunMoon size="18"></svg>
+      </m-button>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,1 @@
-<button [type]="type()">{{ text() ?? '' | translate }}</button>
+<button (click)="onClick.emit()" [class]="'rounded-sm px-4 py-2 ' + css()" [type]="type()"><ng-content /></button>

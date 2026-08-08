@@ -13,108 +13,86 @@
 }
 
 :root {
+  /* Light Theme — pastel arcade cabinet */
+  --background: #f7f2ff;
+  --foreground: #21133d;
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary: #6d28d9;
+  --primary-foreground: #ffffff;
+  --secondary: #e9e0ff;
+  --secondary-foreground: var(--foreground);
+  --muted: #f0eaff;
+  --muted-foreground: #685986;
+  --accent: #ffd166;
+  --accent-foreground: #2a1645;
+  --border: #d3c1f4;
+  --input: #e2d6fa;
+  --ring: #a855f7;
+  --sidebar: #fbf8ff;
+  --sidebar-foreground: var(--foreground);
+  --sidebar-ring: var(--ring);
+
+  --hero-gradient: linear-gradient(
+    90deg,
+    #6d28d9,
+    #a855f7,
+    #22d3ee,
+    #f43f9d,
+    #22d3ee,
+    #a855f7,
+    #6d28d9
+  );
+
   /* Global */
-  scroll-padding-top: var(--header-size);
-  --radius: 0.625rem;
   --header-size: 3.5rem;
   --footer-size: 4.5rem;
   --page-pad: 4rem;
   --page-pad-t: calc(var(--header-size) + var(--page-pad));
   --page-pad-b: calc(var(--footer-size) + var(--page-pad));
   --page-h: calc(100vh - calc(var(--page-pad-t) + var(--page-pad-b)));
-
-  /* Light */
-  --background: #edf1f8;
-  --foreground: #2e3440;
-  --card: var(--background);
-  --card-foreground: var(--foreground);
-  --popover: var(--background);
-  --popover-foreground: var(--foreground);
-  --primary: #5e81ac;
-  --primary-foreground: var(--background);
-  --secondary: #ecf0f7;
-  --secondary-foreground: var(--foreground);
-  --muted: #e5e9f0;
-  --muted-foreground: #4c566a;
-  --accent: #d4d7df;
-  --accent-foreground: var(--foreground);
-  --destructive: #bf616a;
-  --border: #d8dee9;
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
-
-  --hero-gradient: linear-gradient(
-    90deg,
-    var(--color-indigo-600),
-    var(--color-indigo-300),
-    var(--color-sky-500),
-    var(--color-fuchsia-500),
-    var(--color-sky-500),
-    var(--color-indigo-300),
-    var(--color-indigo-600)
-  );
+  scroll-padding-top: var(--header-size);
+  --home-gradient: radial-gradient(var(--muted), 85%, var(--background));
 }
 
 .dark {
-  /* Dark */
-  --background: #2e3440;
-  --foreground: #e5e9f0;
+  /* Dark Theme — neon arcade at midnight */
+  --background: #100b24;
+  --foreground: #f7f2ff;
   --card: var(--background);
   --card-foreground: var(--foreground);
   --popover: var(--background);
   --popover-foreground: var(--foreground);
-  --primary: #4c566a;
-  --primary-foreground: var(--background);
-  --secondary: #2a2e3b;
+  --primary: #9b5cff;
+  --primary-foreground: #160b31;
+  --secondary: #1d1240;
   --secondary-foreground: var(--foreground);
-  --muted: #242933;
-  --muted-foreground: #d8dee9;
-  --accent: #353949;
-  --accent-foreground: var(--foreground);
-  --destructive: #8c2d1c;
-  --border: #1f222b;
+  --muted: #170e34;
+  --muted-foreground: #c9bae9;
+  --accent: #ffcf5c;
+  --accent-foreground: #251143;
+  --border: #3b286c;
   --input: var(--border);
-  --ring: var(--border);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: var(--background);
-  --sidebar-primary: var(--background);
-  --sidebar-primary-foreground: var(--foreground);
-  --sidebar-accent: var(--background);
-  --sidebar-accent-foreground: var(--foreground);
-  --sidebar-border: var(--muted);
-  --sidebar-ring: var(--muted);
+  --ring: #22d3ee;
+  --sidebar: #150d30;
+  --sidebar-foreground: var(--foreground);
+  --sidebar-ring: var(--ring);
 
   --hero-gradient: linear-gradient(
     90deg,
-    var(--color-indigo-600),
-    var(--color-indigo-400),
-    var(--color-sky-500),
-    var(--color-pink-500),
-    var(--color-sky-500),
-    var(--color-indigo-400),
-    var(--color-indigo-600)
+    #7c3aed,
+    #c026d3,
+    #22d3ee,
+    #fb3b9a,
+    #22d3ee,
+    #c026d3,
+    #7c3aed
   );
 }
 
-.p-content {
+.content {
   margin-top: var(--page-pad-t);
   margin-bottom: var(--page-pad);
 }
@@ -135,32 +113,19 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
   /* Fonts */
   --font-inter: 'Inter';
   --font-grotesk: 'Space Grotesk';
+
+  /* Main gradient */
+  --background-image-home-gradient: var(--home-gradient);
 
   /* Hero gradient */
   --animate-hero-gradient: hero-gradient 6s linear infinite;
