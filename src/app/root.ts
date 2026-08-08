@@ -7,7 +7,7 @@ import { HeaderComponent } from './components/header/header';
   selector: 'root',
   templateUrl: './root.html',
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterOutlet, HeaderComponent, FooterComponent]
 })
 export class Root {}
