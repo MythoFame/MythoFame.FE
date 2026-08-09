@@ -37,8 +37,18 @@ export class HeaderComponent {
       disabled: true
     },
     {
+      label: 'header.sfdct',
+      link: '/sfdct',
+      disabled: true
+    },
+    {
       label: 'header.loader',
       link: '/loader',
+      disabled: true
+    },
+    {
+      label: 'header.browser',
+      link: '/browser',
       disabled: true
     },
     {
@@ -67,6 +77,10 @@ export class HeaderComponent {
   navigate(route: string): void {
     this.closeMenu();
     this._navigateService.toPage(route);
+  }
+
+  visitGithub(): void {
+    window.open('https://github.com/MythoFame', '_blank');
   }
 
   @HostListener('document:keydown.escape')

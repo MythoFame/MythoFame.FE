@@ -15,11 +15,15 @@ export const routes: Routes = [
   },
   {
     path: 'redux',
-    loadChildren: () => reduxRoutes
+    loadComponent: () => import('../pages/redux/redux').then((c) => c.Redux)
   },
   {
-    path: 'loader',
-    loadChildren: () => loaderRoutes
+    path: 'sfdct',
+    loadComponent: () => import('../pages/sfdct/sfdct').then((c) => c.Sfdct)
+  },
+  {
+    path: 'browser',
+    loadComponent: () => import('../pages/browser/browser').then((c) => c.Browser)
   },
   {
     path: 'workshop',
@@ -29,20 +33,6 @@ export const routes: Routes = [
     path: '**',
     pathMatch: 'full',
     loadComponent: () => import('../pages/not-found/not-found').then((c) => c.NotFound)
-  }
-];
-
-const reduxRoutes: Routes = [
-  {
-    path: '',
-    loadComponent: () => import('../pages/redux/redux').then((c) => c.Redux)
-  }
-];
-
-const loaderRoutes: Routes = [
-  {
-    path: '',
-    loadComponent: () => import('../pages/loader/loader').then((c) => c.Loader)
   }
 ];
 

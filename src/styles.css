@@ -41,6 +41,7 @@
   --header-size: 3.5rem;
   --footer-size: 4.5rem;
   --page-pad: 4rem;
+  --side-margin: 3rem;
   --page-pad-t: calc(var(--header-size) + var(--page-pad));
   --page-pad-b: calc(var(--footer-size) + var(--page-pad));
   --page-h: calc(100vh - calc(var(--page-pad-t) + var(--page-pad-b)));
@@ -148,6 +149,10 @@
   min-height: var(--page-h);
   margin-top: var(--page-pad-t);
   margin-bottom: var(--page-pad);
-  margin-left: var(--page-pad);
-  margin-right: var(--page-pad);
+  margin-left: var(--side-margin);
+  margin-right: var(--side-margin);
+}
+
+.pixelated {
+  image-rendering: pixelated;
 }
