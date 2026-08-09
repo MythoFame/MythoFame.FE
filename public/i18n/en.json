@@ -3,8 +3,16 @@
     "home": "Home",
     "about": "About",
     "redux": "Superfighters Redux",
+    "sfdct": "SFDCT",
     "loader": "Meatbag Loader",
+    "browser": "Servers Browser",
     "workshop": "Workshop"
+  },
+  "about": {
+    "hero": {
+      "title": "What is MythoFame &#8193;",
+      "description": "// TODO: Fix me later!"
+    }
   },
   "footer": {
     "author": "MythoFame",
