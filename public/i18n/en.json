@@ -6,6 +6,7 @@
     "sfdct": "SFDCT",
     "loader": "Meatbag Loader",
     "browser": "Servers Browser",
+    "tokenizer": "Tokenizer",
     "workshop": "Workshop"
   },
   "about": {
@@ -43,6 +44,22 @@
       "title": "Built with passion",
       "description": "MythoFame is made by passionate contributors who want to leave something.<br/>Every creation helps keep the community creative, welcoming, and full of new things to explore.",
       "closing": "~ Passion fuels purpose"
+    }
+  },
+  "tokenizer": {
+    "result": {
+      "empty": "Empty",
+      "title": "Result:",
+      "copy": "COPY"
+    },
+    "hero": {
+      "title": "Tokenizer",
+      "description": "Use this tool to generate 'official' tokens used to lock map files."
+    },
+    "form": {
+      "author": "Author",
+      "mapName": "Map name",
+      "submit": "Calculate"
     }
   },
   "footer": {

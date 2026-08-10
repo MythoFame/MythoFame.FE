@@ -4,12 +4,16 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter.ttf');
+  src:
+    local('Inter'),
+    url('/fonts/Inter.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('/fonts/SpaceGrotesk.ttf');
+  src:
+    local('Space Grotesk'),
+    url('/fonts/SpaceGrotesk.woff2') format('woff2');
 }
 
 :root {
@@ -40,10 +44,10 @@
   /* Global */
   --header-size: 3.5rem;
   --footer-size: 4.5rem;
-  --page-pad: 4rem;
-  --side-margin: 2.5rem;
-  --page-pad-t: calc(var(--header-size) + var(--page-pad));
-  --page-pad-b: calc(var(--footer-size) + var(--page-pad));
+  --pad-y: 4rem;
+  --pad-x: 2.5rem;
+  --page-pad-t: calc(var(--header-size) + var(--pad-y));
+  --page-pad-b: calc(var(--footer-size) + var(--pad-y));
   --page-h: calc(100vh - calc(var(--page-pad-t) + var(--page-pad-b)));
   scroll-padding-top: var(--header-size);
   --home-gradient: radial-gradient(var(--muted), 85%, var(--background));
@@ -118,11 +122,15 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    font-family: 'Source Code Pro', 'Red Hat Text';
+    font-family: 'Inter';
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  input {
+    @apply outline-none focus:outline-none;
   }
 }
 
@@ -141,16 +149,29 @@
   background: var(--muted);
 }
 
+.page-h {
+  min-height: var(--page-h);
+}
+
 .pad-t {
   margin-top: var(--page-pad-t);
+}
+
+.pad-b {
+  margin-bottom: var(--page-pad-b);
+}
+
+.pad-x {
+  margin-left: var(--pad-x);
+  margin-right: var(--pad-x);
 }
 
 .content {
   min-height: var(--page-h);
   margin-top: var(--page-pad-t);
-  margin-bottom: var(--page-pad);
-  margin-left: var(--side-margin);
-  margin-right: var(--side-margin);
+  margin-bottom: var(--pad-y);
+  margin-left: var(--pad-x);
+  margin-right: var(--pad-x);
 }
 
 .pixelated {

@@ -49,7 +49,12 @@ export class HeaderComponent {
     {
       label: 'header.browser',
       link: '/browser',
-      disabled: true
+      disabled: false
+    },
+    {
+      label: 'header.tokenizer',
+      link: '/tokenizer',
+      disabled: false
     },
     {
       label: 'header.workshop',

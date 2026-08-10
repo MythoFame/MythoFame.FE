@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class StyleService {
   merge(style: string, toMerge: string): string {
-    if (style === '') return ' ' + toMerge;
+    if (style === '' || style.charAt(0) !== '') return ' ' + style + ' ' + toMerge;
 
     return style + ' ' + toMerge;
   }

@@ -19,8 +19,9 @@ export class ButtonComponent {
     let style = '';
     const kind = this.kind();
 
-    if (this.disabled())
-      style = this._styleService.merge(style, 'bg-muted hover:bg-muted/90 text-foreground/70 hover:text-foreground/50');
+    const disabled = this.disabled();
+
+    if (disabled) style = this._styleService.merge(style, 'text-foreground/80');
 
     switch (kind) {
       case 'primary':

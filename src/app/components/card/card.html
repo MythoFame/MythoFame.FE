@@ -11,7 +11,7 @@
   <!-- Card content -->
   <div [class]="'relative z-10' + textCss()">
     <h3 [class]="'w-full text-xl font-bold' + titleCss()" [innerHtml]="title() | translate"></h3>
-    <p [class]="'mt-2 leading-6' + descriptionCss()" [innerHtml]="description() | translate"></p>
+    <p [class]="'mt-2' + descriptionCss()" [innerHtml]="description() | translate"></p>
 
     <ng-content />
   </div>

@@ -10,10 +10,10 @@ export class Browser implements OnInit {
   private readonly _servers = resource({
     loader: async () => {
       const response = await fetch('https://mythologicinteractive.com/SFDGameServices.asmx', {
-        method: 'GET',
+        method: 'POST',
         headers: {
-          'Content-Type': 'text/xml; charset=utf-8',
-          SOAPAction: '"https://mythologicinteractive.com/Games/SFD/GetGameServers"'
+          'Content-Type': 'application/soap+xml; charset=utf-8',
+          SOAPAction: 'https://mythologicinteractive.com/Games/SFD/GetGameServers'
         },
         body: `
           <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope">

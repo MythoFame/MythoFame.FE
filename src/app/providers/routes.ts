@@ -26,6 +26,10 @@ export const routes: Routes = [
     loadComponent: () => import('../pages/browser/browser').then((c) => c.Browser)
   },
   {
+    path: 'tokenizer',
+    loadComponent: () => import('../pages/tokenizer/tokenizer').then((c) => c.Tokenizer)
+  },
+  {
     path: 'workshop',
     loadChildren: () => workshopRoutes
   },

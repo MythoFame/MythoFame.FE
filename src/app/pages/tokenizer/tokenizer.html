@@ -1,0 +1,38 @@
+<div class="content flex flex-col items-center justify-center">
+  <div class="mx-auto flex w-full flex-col gap-4 lg:w-1/2">
+    <div class="w-full">
+      <h1 class="text-2xl font-bold">{{ 'tokenizer.hero.title' | translate }}</h1>
+      <p class="text-muted-foreground">{{ 'tokenizer.hero.description' | translate }}</p>
+    </div>
+    <div class="bg-secondary mt-2 flex flex-col items-center gap-4 rounded-md px-4 py-2 lg:flex-row">
+      <p class="font-semibold">{{ 'tokenizer.result.title' | translate }}</p>
+      <p class="font-grotesk text-accent flex-1 text-xs md:text-sm">
+        {{ token() ?? ('tokenizer.result.empty' | translate) }}
+      </p>
+      <m-button [disabled]="token() === undefined" (onClick)="copy()" [kind]="'transparent'">{{
+        'tokenizer.result.copy' | translate
+      }}</m-button>
+    </div>
+    <div class="flex flex-col gap-4">
+      <div class="flex w-full flex-col items-center justify-center gap-4 lg:flex-row">
+        <m-input
+          [kind]="'transparent'"
+          class="w-full"
+          id="author"
+          [field]="mapForm.author"
+          text="tokenizer.form.author"
+        />
+        <m-input
+          [kind]="'transparent'"
+          class="w-full"
+          id="mapName"
+          [field]="mapForm.mapName"
+          text="tokenizer.form.mapName"
+        />
+      </div>
+      <m-button class="w-full" [kind]="'secondary'" [disabled]="!this.mapForm().valid()" (click)="onSubmit()">{{
+        'tokenizer.form.submit' | translate
+      }}</m-button>
+    </div>
+  </div>
+</div>
