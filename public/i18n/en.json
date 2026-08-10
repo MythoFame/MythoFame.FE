@@ -11,7 +11,38 @@
   "about": {
     "hero": {
       "title": "What is MythoFame &#8193;",
-      "description": "// TODO: Fix me later!"
+      "description": "A fan community for MythoLogic Interactive<br/>Building and sharing what players create"
+    },
+    "intro": {
+      "title": "Made by fans, for fans",
+      "description": "MythoFame is a home for community-made content for MythoLogic Interactive games, with a special focus on Superfighters Deluxe. We bring creations together so they are easier to discover, enjoy, and share with other players."
+    },
+    "content": {
+      "hero": {
+        "title": "A place for creations of every kind",
+        "description": "We make far more than one kind of thing. Whether you are looking for something new to play or have a creation of your own to share, you can upload it here."
+      },
+      "mods": {
+        "title": "Mods",
+        "description": "New ways to play and overhaul the game."
+      },
+      "maps": {
+        "title": "Maps",
+        "description": "Fresh campaigns, custom modes, and places to battle."
+      },
+      "scripts": {
+        "title": "Scripts",
+        "description": "Tools, game modes, and ideas to enhance the game."
+      },
+      "resources": {
+        "title": "Resources & More",
+        "description": "Textures, sounds, experiments, and all the other things."
+      }
+    },
+    "community": {
+      "title": "Built with passion",
+      "description": "MythoFame is made by passionate contributors who want to leave something.<br/>Every creation helps keep the community creative, welcoming, and full of new things to explore.",
+      "closing": "~ Passion fuels purpose"
     }
   },
   "footer": {

@@ -34,7 +34,7 @@ export class HeaderComponent {
     {
       label: 'header.redux',
       link: '/redux',
-      disabled: true
+      disabled: false
     },
     {
       label: 'header.sfdct',

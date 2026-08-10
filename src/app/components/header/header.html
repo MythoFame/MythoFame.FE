@@ -15,7 +15,7 @@
 
         <div
           [ngClass]="{ 'text-foreground! w-4/5': isMenuOpen() }"
-          class="text-muted border-accent bg-muted fixed top-0 -left-0.5 mt-(--header-size) flex h-screen w-0 flex-col items-center gap-6 overflow-hidden border-r-2 py-6 duration-500 ease-out"
+          class="text-muted border-secondary bg-muted fixed top-0 -left-0.5 mt-(--header-size) flex h-screen w-0 flex-col items-center gap-6 overflow-hidden border-r py-6 duration-500 ease-out"
         >
           @for (route of routes; track route.link) {
             <div class="min-w-4/5">

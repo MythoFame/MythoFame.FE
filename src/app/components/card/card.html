@@ -1,0 +1,18 @@
+<div
+  class="group border-border bg-muted/60 relative h-full cursor-pointer overflow-hidden rounded-xl border px-5 py-4 shadow-lg transition-transform duration-450 ease-in-out hover:scale-105"
+  [class]="cardCss()"
+  (mousemove)="onMouseMove($event)"
+>
+  <div
+    class="absolute inset-0 opacity-0 transition-opacity duration-600 group-hover:opacity-100"
+    [style.background]="reflectionCss()"
+  ></div>
+
+  <!-- Card content -->
+  <div [class]="'relative z-10' + textCss()">
+    <h3 [class]="'w-full text-xl font-bold' + titleCss()" [innerHtml]="title() | translate"></h3>
+    <p [class]="'mt-2 leading-6' + descriptionCss()" [innerHtml]="description() | translate"></p>
+
+    <ng-content />
+  </div>
+</div>
