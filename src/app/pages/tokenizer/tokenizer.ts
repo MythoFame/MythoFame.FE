@@ -3,11 +3,12 @@ import { InputComponent } from '@/components/input/input';
 import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
 import { Component, inject, signal, ViewEncapsulation } from '@angular/core';
 import { form, required } from '@angular/forms/signals';
+import { LucideClipboard } from '@lucide/angular';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'tokenizer',
-  imports: [ButtonComponent, InputComponent, TranslatePipe, ClipboardModule],
+  imports: [ButtonComponent, InputComponent, TranslatePipe, ClipboardModule, LucideClipboard],
   templateUrl: './tokenizer.html',
   encapsulation: ViewEncapsulation.None
 })

@@ -18,10 +18,6 @@ export const routes: Routes = [
     loadComponent: () => import('../pages/redux/redux').then((c) => c.Redux)
   },
   {
-    path: 'sfdct',
-    loadComponent: () => import('../pages/sfdct/sfdct').then((c) => c.Sfdct)
-  },
-  {
     path: 'browser',
     loadComponent: () => import('../pages/browser/browser').then((c) => c.Browser)
   },

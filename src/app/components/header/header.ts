@@ -37,19 +37,9 @@ export class HeaderComponent {
       disabled: false
     },
     {
-      label: 'header.sfdct',
-      link: '/sfdct',
-      disabled: true
-    },
-    {
       label: 'header.loader',
       link: '/loader',
       disabled: true
-    },
-    {
-      label: 'header.browser',
-      link: '/browser',
-      disabled: false
     },
     {
       label: 'header.tokenizer',

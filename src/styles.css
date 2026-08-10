@@ -167,11 +167,10 @@
 }
 
 .content {
+  width: 100%;
   min-height: var(--page-h);
   margin-top: var(--page-pad-t);
   margin-bottom: var(--pad-y);
-  margin-left: var(--pad-x);
-  margin-right: var(--pad-x);
 }
 
 .pixelated {

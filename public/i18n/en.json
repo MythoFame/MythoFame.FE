@@ -2,8 +2,7 @@
   "header": {
     "home": "Home",
     "about": "About",
-    "redux": "Superfighters Redux",
-    "sfdct": "SFDCT",
+    "redux": "SFR & Forks",
     "loader": "Meatbag Loader",
     "browser": "Servers Browser",
     "tokenizer": "Tokenizer",
@@ -44,6 +43,20 @@
       "title": "Built with passion",
       "description": "MythoFame is made by passionate contributors who want to leave something.<br/>Every creation helps keep the community creative, welcoming, and full of new things to explore.",
       "closing": "~ Passion fuels purpose"
+    }
+  },
+  "redux": {
+    "hero": {
+      "title": "",
+      "description": "Superfighters Redux is an open-source mod for Superfighters Deluxe.<br/>It adds new content and tweaks mechanics for a more engaging game experience."
+    },
+    "skins": {
+      "title": "Cosmetics",
+      "description": "Explore a plethora of new items and colors you can equip.<br/>Some skins even feature a tertiary color option."
+    },
+    "weapons": {
+      "title": "Weapons",
+      "description": "Discover tons of new weapons and makeshift items.<br/>Some weapons feature even unique mechanics and effects."
     }
   },
   "tokenizer": {
