@@ -57,6 +57,17 @@
     "weapons": {
       "title": "Weapons",
       "description": "Discover tons of new weapons and makeshift items.<br/>Some weapons feature even unique mechanics and effects."
+    },
+    "more": {
+      "title": "Much More",
+      "description": "Enjoy new music, sounds, triggers, effects, items<br/>and various other enhancements."
+    },
+    "forks": {
+      "title": "&#8192; Notable Fork(s) &#8192;"
+    },
+    "sfdct": {
+      "title": "",
+      "description": "Superfighters Custom is an addon for Superfighters Deluxe.<br/>It adds and tweaks some features while mantaining compatibility with vanilla-SFD.<br/>Meaning that a player can join a normal SFD server with SFDCT and vice-versa."
     }
   },
   "tokenizer": {

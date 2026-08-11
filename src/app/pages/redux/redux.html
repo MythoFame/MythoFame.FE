@@ -1,25 +1,25 @@
 <div class="content mx-auto flex max-w-6xl flex-col gap-34">
-  <div class="flex flex-col items-center gap-8 text-center">
-    <img class="pixelated lg:max-w-2/3" src="images/redux/logo.gif" alt="Logo" />
+  <div class="flex w-full flex-col items-center gap-8 text-center">
+    <img class="pixelated w-full max-w-150" src="images/redux/logo.gif" alt="SFR Logo" />
     <p class="font-semibold lg:text-lg" [innerHtml]="'redux.hero.description' | translate"></p>
   </div>
 
   <div class="border-secondary w-full border-t-2"></div>
 
   <div class="flex w-full flex-col items-center justify-center gap-22">
-    <div class="flex w-full flex-col-reverse items-center justify-between gap-12 lg:flex-row">
-      <div class="flex-[1.2]">
+    <div class="flex w-full flex-col-reverse items-center justify-between gap-12 md:flex-row">
+      <div class="w-full flex-[1.2] text-center md:text-left">
         <h1 class="text-xl font-semibold" [innerHtml]="'redux.skins.title' | translate"></h1>
         <p class="mt-2" [innerHtml]="'redux.skins.description' | translate"></p>
       </div>
-      <div class="relative max-w-200 flex-[0.8]">
+      <div class="relative w-full flex-[0.8]">
         <img
-          class="pixelated max-w-100 rounded-2xl shadow-xl lg:absolute lg:top-8 lg:left-32 lg:-translate-y-1/2"
+          class="pixelated top-6 left-6 hidden w-2/3 rounded-2xl shadow-xl md:absolute md:block md:-translate-y-1/2"
           src="images/redux/skins2.gif"
           alt="Skins 2"
         />
         <img
-          class="pixelated hidden max-w-100 rounded-2xl shadow-xl lg:absolute lg:top-0 lg:left-0 lg:block lg:-translate-y-1/2"
+          class="pixelated top-0 left-0 w-full rounded-2xl shadow-xl md:absolute md:w-2/3 md:-translate-y-1/2"
           src="images/redux/skins1.gif"
           alt="Skins 1"
         />
@@ -28,13 +28,40 @@
 
     <div class="border-secondary w-full border-t-2"></div>
 
-    <div class="flex w-full flex-col-reverse items-center justify-between gap-12 lg:flex-row-reverse">
-      <div class="flex-[1.2]">
+    <div class="flex w-full flex-col-reverse items-center justify-between gap-12 md:flex-row-reverse">
+      <div class="w-full flex-[1.2] text-center md:text-left">
         <h1 class="text-xl font-semibold" [innerHtml]="'redux.weapons.title' | translate"></h1>
         <p class="mt-2" [innerHtml]="'redux.weapons.description' | translate"></p>
       </div>
-      <div class="flex-[0.8]">
-        <img class="pixelated max-w-100 rounded-2xl shadow-xl" src="images/redux/weapons.gif" alt="Weapons" />
+      <div class="w-full flex-[0.8]">
+        <img class="pixelated w-full rounded-2xl shadow-xl" src="images/redux/weapons.gif" alt="Weapons" />
+      </div>
+    </div>
+
+    <div class="border-secondary w-full border-t-2"></div>
+
+    <div class="flex w-full flex-col-reverse items-center justify-between gap-12 md:flex-row">
+      <div class="w-full flex-[1.2] text-center md:text-left">
+        <h1 class="text-xl font-semibold" [innerHtml]="'redux.more.title' | translate"></h1>
+        <p class="mt-2" [innerHtml]="'redux.more.description' | translate"></p>
+      </div>
+      <div class="w-full flex-[0.8]">
+        <img class="pixelated w-full rounded-2xl shadow-xl" src="images/redux/more.gif" alt="More" />
+      </div>
+    </div>
+  </div>
+
+  <div class="border-secondary w-full border-t-2"></div>
+
+  <div>
+    <h1
+      class="decoration-accent text-center text-4xl font-bold underline decoration-2"
+      [innerHtml]="'redux.forks.title' | translate"
+    ></h1>
+    <div class="mt-14 flex flex-col items-center gap-22">
+      <div class="flex w-full flex-col items-center gap-4 text-center">
+        <img class="pixelated w-full max-w-150" src="images/sfdct/logo.gif" alt="SFDCT Logo" />
+        <p class="italic" [innerHtml]="'redux.sfdct.description' | translate"></p>
       </div>
     </div>
   </div>
