@@ -6,6 +6,7 @@
     "loader": "Meatbag Loader",
     "browser": "Servers Browser",
     "tokenizer": "Tokenizer",
+    "registry": "Registry",
     "workshop": "Workshop"
   },
   "about": {
@@ -84,6 +85,12 @@
       "author": "Author",
       "mapName": "Map name",
       "submit": "Calculate"
+    }
+  },
+  "registry": {
+    "hero": {
+      "title": "Registry",
+      "description": "GitHub content."
     }
   },
   "footer": {

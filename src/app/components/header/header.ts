@@ -39,7 +39,7 @@ export class HeaderComponent {
     {
       label: 'header.loader',
       link: '/loader',
-      disabled: true
+      disabled: false
     },
     {
       label: 'header.tokenizer',

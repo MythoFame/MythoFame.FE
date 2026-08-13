@@ -18,12 +18,20 @@ export const routes: Routes = [
     loadComponent: () => import('../pages/redux/redux').then((c) => c.Redux)
   },
   {
+    path: 'loader',
+    loadComponent: () => import('../pages/loader/loader').then((c) => c.Loader)
+  },
+  {
     path: 'browser',
     loadComponent: () => import('../pages/browser/browser').then((c) => c.Browser)
   },
   {
     path: 'tokenizer',
     loadComponent: () => import('../pages/tokenizer/tokenizer').then((c) => c.Tokenizer)
+  },
+  {
+    path: 'registry',
+    loadComponent: () => import('../pages/registry/registry').then((c) => c.Registry)
   },
   {
     path: 'workshop',
